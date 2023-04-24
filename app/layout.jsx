@@ -1,20 +1,28 @@
 "use client";
 
-import './src/globals.css';
+import style from "./src/globals.css"
 import { darkTheme, lightTheme } from "./theme/themes";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider, CssBaseline, Container } from "@mui/material";
+import Navigation from '../components/ui/Navigation/navigation';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="es">
       <head />
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={lightTheme}>
         <CssBaseline />
-        <body>{children}</body>
+        <body>
+          <header className="header">
+            <Container maxWidth="lg">
+              <Navigation />
+            </Container>
+          </header>
+          <main>
+            <Container maxWidth="lg">
+              {children}
+            </Container>
+          </main>
+        </body>
       </ThemeProvider>
     </html>
   )

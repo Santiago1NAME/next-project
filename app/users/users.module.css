@@ -1,0 +1,11 @@
+.navPost{
+    position: sticky;
+    margin-bottom: 15px;
+    padding: 10px
+}
+
+.textNavPost{
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
